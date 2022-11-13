@@ -1,14 +1,19 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import { ipcRenderer } from 'electron'
+
+// @ts-ignore
+const electron = window.electron
+console.log(electron, 'ipcRenderer -- ipcRenderer')
 
 const click = () => {
-  ipcRenderer.send('message', 'this is a click event!', '你好')
+  electron.ipcRenderer.send('message', 'this is a click event!', '你好')
+  console.log('click')
 }
-ipcRenderer.on('recall', (_, ...data) => {
-  console.log(data)
+// ipcRenderer.on('recall', (_, ...data) => {
+//   console.log(data)
+// })
+electron.recall((_: any, ...data: any) => {
+  console.log(data, 'data data')
 })
 </script>
 

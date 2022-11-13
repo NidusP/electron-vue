@@ -1,4 +1,8 @@
 # electron-vue
+    * 下载electron依赖失败, 可以配置国内的源. yarn -> .yarnrc | pnpm/npm -> .npmrc 
+    * [vite-plugin-electron](https://github.com/electron-vite/vite-plugin-electron) 插件配置参考官网, 版本间有差异
+    * electron-builder 用于electron打包构建 
+    * 上下文通讯隔离[参考官网](https://www.electronjs.org/zh/docs/latest/tutorial/context-isolation#%E4%B8%8Etypescript%E4%B8%80%E5%90%8C%E4%BD%BF%E7%94%A8)
 
 # Vue 3 + TypeScript + Vite
 
